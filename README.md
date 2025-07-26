@@ -1,4 +1,4 @@
-# car_rental_app
+<h2 align="centar"> Flutter Car Rental App Template </h2>
 
 A new Flutter project.
 
