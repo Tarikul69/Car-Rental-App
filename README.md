@@ -1,16 +1,9 @@
-<h2 alignment="centar"> Flutter Car Rental App Template </h2>
+<h2 style="text-align: center;">Flutter Car Rental App Template</h2>
 
 A new Flutter project.
 
-## Getting Started
+## Base Template
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+https://codecanyon.net/item/6ammart-car-rental-module-addon/56881320?s_rank=1
+```
