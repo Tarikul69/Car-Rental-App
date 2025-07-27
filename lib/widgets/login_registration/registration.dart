@@ -1,29 +1,100 @@
+import 'package:car_rental_app/components/components.dart';
+import 'package:car_rental_app/routes/app_routes.dart';
+import 'package:car_rental_app/styles/style.dart';
+import 'package:car_rental_app/widgets/login_registration/login.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-class registration extends StatelessWidget {
+class registration extends StatefulWidget {
   const registration({super.key});
 
   @override
+  State<registration> createState() => _registrationState();
+}
+
+class _registrationState extends State<registration> {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: backgroundColor,
       appBar: AppBar(
-        title: const Text('Registration'),
+        backgroundColor: Colors.green,
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'Registration Page',
-              style: TextStyle(fontSize: 24),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                // Add your registration logic here
-              },
-              child: const Text('Register'),
-            ),
-          ],
+      body: SingleChildScrollView(
+        child: Container(
+          padding: EdgeInsets.all(15),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(
+                height: 25,
+              ),
+              Text(
+                "Registration",
+                style: textStyle(),
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              textFormField(
+                hintText: "Enter Your Name",
+                icon: Icons.person,
+                //message: "Enter your name"
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              textFormField(
+                hintText: "Enter Your Email",
+                icon: Icons.email,
+                //message: "Enter your email",
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              textFormField(
+                hintText: "Password",
+                icon: Icons.password,
+                //message: "Password",
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              textFormField(
+                hintText: "Confirm Password",
+                icon: Icons.password,
+                //message: "Confirm Password",
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              elevatedButton(
+                text: "Registration",
+                color: Colors.black,
+                onPressed: () {
+                  Get.to(login());
+                },
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("Already have an account?"),
+                  InkWell(
+                      onTap: () {
+                        Get.toNamed(AppRoutes.login);
+                      },
+                      child: Text(
+                        " Signin",
+                        style: textStyle(15),
+                      )),
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );
