@@ -1,4 +1,6 @@
 import 'package:car_rental_app/routes/app_routes.dart';
+import 'package:car_rental_app/widgets/home/home.dart';
+import 'package:car_rental_app/widgets/login_registration/forgetpassword.dart';
 import 'package:car_rental_app/widgets/login_registration/login.dart';
 import 'package:car_rental_app/widgets/login_registration/registration.dart';
 import 'package:car_rental_app/widgets/splash_screen/splash_screen.dart';
@@ -17,6 +19,14 @@ class AppPages {
     GetPage(
       name: AppRoutes.login,
       page: () => login(),
+    ),
+    GetPage(
+      name: AppRoutes.forgetpassword,
+      page: () => forgetpassword(),
+    ),
+    GetPage(
+      name: AppRoutes.home,
+      page: () => home(),
     ), // Assuming login uses the same widget for now
   ];
 }

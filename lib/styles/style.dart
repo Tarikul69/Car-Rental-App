@@ -21,3 +21,7 @@ TextStyle textStyle([double size = 25.0]) {
     color: Color.fromARGB(255, 0, 0, 0),
   );
 }
+
+//Font family
+const String kFontFamily = 'Roboto';
+const String kSecondaryFontFamily = 'Arial';

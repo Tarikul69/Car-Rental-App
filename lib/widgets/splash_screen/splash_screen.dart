@@ -1,5 +1,7 @@
 import 'package:car_rental_app/widgets/login_registration/registration.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/route_manager.dart';
 
 class splash_screen extends StatefulWidget {
   const splash_screen({Key? key}) : super(key: key);
@@ -25,17 +27,12 @@ class _splash_screenState extends State<splash_screen> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green,
+      backgroundColor: const Color.fromARGB(255, 252, 252, 252),
       body: Center(
-        child: const Text(
-          'GroFast',
-          style: TextStyle(
-            fontSize: 24,
-            fontWeight: FontWeight.bold,
-            color: Colors.black,
-          ),
-        ),
-      ),
+          child: Image.asset('assets/car.gif',
+              width: Get.width * 0.9,
+              height: Get.height * 0.2,
+              fit: BoxFit.cover)),
     );
   }
 }
