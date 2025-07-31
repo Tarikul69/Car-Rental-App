@@ -1,4 +1,7 @@
+import 'package:car_rental_app/routes/app_routes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/route_manager.dart';
 
 class GroFastCard extends StatelessWidget {
   final Map<String, String> data;

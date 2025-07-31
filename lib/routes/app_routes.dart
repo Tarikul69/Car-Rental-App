@@ -4,4 +4,7 @@ abstract class AppRoutes {
   static const String login = '/login';
   static const String forgetpassword = '/forgetpassword';
   static const String home = '/home';
+  static const String top_rated = '/top_rated';
+  static const String car_details = '/car_details';
+  static const String notifications = '/notifications';
 }
