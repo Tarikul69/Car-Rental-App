@@ -228,3 +228,74 @@ Widget carousel_slider(dynamic home_controller) {
     }).toList(),
   );
 }
+
+//////Image Slider Widget//////
+Widget CarImageSlider({required List<String> imageUrls}) {
+  return CarouselSlider(
+    options: CarouselOptions(
+      height: 200,
+      autoPlay: true,
+      enlargeCenterPage: true,
+      aspectRatio: 16 / 9,
+      viewportFraction: 0.8,
+    ),
+    items: imageUrls.map((url) {
+      return Builder(
+        builder: (BuildContext context) {
+          return Container(
+            margin: EdgeInsets.symmetric(horizontal: 5.0),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10.0),
+              child: Image.asset(
+                url,
+                fit: BoxFit.cover,
+                width: MediaQuery.of(context).size.width,
+              ),
+            ),
+          );
+        },
+      );
+    }).toList(),
+  );
+}
+
+///////Bottom Navigation Bar Widget//////
+class CustomBottomNavBar extends StatelessWidget {
+  final int currentIndex;
+  final Function(int) onTap;
+
+  const CustomBottomNavBar({
+    Key? key,
+    required this.currentIndex,
+    required this.onTap,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return BottomNavigationBar(
+      currentIndex: currentIndex,
+      onTap: onTap,
+      selectedItemColor: Colors.green,
+      unselectedItemColor: Colors.grey,
+      showUnselectedLabels: true,
+      items: const [
+        BottomNavigationBarItem(
+          icon: Icon(Icons.home),
+          label: 'Home',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.notifications),
+          label: 'Notifications',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.favorite),
+          label: 'Favorites',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.person),
+          label: 'Profile',
+        ),
+      ],
+    );
+  }
+}
