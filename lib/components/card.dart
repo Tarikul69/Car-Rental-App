@@ -262,3 +262,49 @@ Widget slider_card1(String imgePath) {
     ),
   );
 }
+
+/////// invite friend card //////////
+Widget invitation_card(BuildContext context) {
+  return Card(
+    elevation: 2,
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+    child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Row(
+          children: [
+            // Invitation Icon
+            CircleAvatar(
+              radius: 30,
+              backgroundColor: Colors.blue[100],
+              child: Icon(Icons.card_giftcard, color: Colors.blue, size: 40),
+            ),
+            SizedBox(width: 16),
+            // Invitation Text
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Invite a Friend',
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(height: 4),
+                  Text(
+                    'Get rewards for inviting friends to use our app.',
+                    style: TextStyle(color: Colors.grey[600]),
+                  ),
+                ],
+              ),
+            ),
+            // Invite Button
+            ElevatedButton(
+              onPressed: () {
+                // Handle invite action
+                //Get.toNamed(AppRoutes.invite_friends);
+              },
+              child: Text('Invite'),
+            ),
+          ],
+        )),
+  );
+}

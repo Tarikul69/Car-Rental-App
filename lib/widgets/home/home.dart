@@ -198,7 +198,9 @@ class home extends StatelessWidget {
                       // Handle card tap
                     ],
                   ),
-                )
+                ),
+                SizedBox(height: 16.0),
+                invitation_card(context)
               ],
             ),
           ),
