@@ -166,7 +166,7 @@ Widget slider_card() {
 }
 
 /////////////////////////////////////
-Widget slider_card1(String imgePath) {
+Widget slider_card1(String imgePath, String carModel) {
   return Card(
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(16.0),
@@ -244,7 +244,7 @@ Widget slider_card1(String imgePath) {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 4),
           child: Text(
-            'Nissan Leaf',
+            carModel,
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
           ),
         ),

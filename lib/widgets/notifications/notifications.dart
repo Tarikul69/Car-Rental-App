@@ -73,6 +73,18 @@ class _AnimatedNotificationCardState extends State<AnimatedNotificationCard> {
     return subtitles[index % subtitles.length];
   }
 
+  String _getImage(int index) {
+    final images = [
+      'assets/car.png',
+      'assets/car1.png',
+      'assets/car.png',
+      'assets/car.png',
+      'assets/car1.png',
+      'assets/car.png',
+    ];
+    return images[index % images.length];
+  }
+
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
@@ -141,7 +153,7 @@ class _AnimatedNotificationCardState extends State<AnimatedNotificationCard> {
                       ClipRRect(
                         borderRadius: BorderRadius.circular(10),
                         child: Image.asset(
-                          'assets/car.png',
+                          _getImage(widget.index),
                           height: 140,
                           width: double.infinity,
                           fit: BoxFit.cover,

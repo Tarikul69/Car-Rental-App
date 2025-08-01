@@ -8,6 +8,8 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:get/route_manager.dart';
 
 class home extends StatefulWidget {
+  final int index = 0;
+
   home({super.key});
 
   @override
@@ -17,6 +19,7 @@ class home extends StatefulWidget {
 class _homeState extends State<home> {
   final HomeController homeController = Get.put(HomeController());
   int _currentIndex = 0;
+
   final List<String> imageList = [
     'assets/car.png',
     'assets/car1.png',
@@ -25,6 +28,27 @@ class _homeState extends State<home> {
     'assets/car1.png',
     'assets/car.png',
   ];
+  String _getImage(int index) {
+    final images = [
+      'assets/car.png',
+      'assets/car1.png',
+      'assets/car.png',
+      'assets/car.png',
+      'assets/car1.png',
+      'assets/car.png',
+    ];
+    return images[index % images.length];
+  }
+
+  String carModel(int index) {
+    final carModels = [
+      'Nissan Leaf',
+      'Tesla Model S',
+      'Ford Mustang',
+      'Chevrolet Bolt',
+    ];
+    return carModels[widget.index % carModels.length];
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -172,7 +196,8 @@ class _homeState extends State<home> {
                   children: [
                     InkWell(
                       child: slider_card1(
-                        'assets/car.png',
+                        _getImage(widget.index),
+                        carModel(widget.index),
                       ),
                       onTap: () {
                         // Handle card tap
@@ -180,9 +205,9 @@ class _homeState extends State<home> {
                           context,
                           AppRoutes.car_details,
                           arguments: {
-                            'carId': 1, // Example argument
-                            'carName': 'Nissan Leaf',
-                            'carImage': 'assets/car.png',
+                            'carId': widget.index, // Example argument
+                            'carName': carModel(widget.index),
+                            'carImage': _getImage(widget.index),
                             'carDescription': 'RideMaster Taxis',
                             'carPrice': 10000,
                             'carRating': 4.5,
@@ -194,7 +219,8 @@ class _homeState extends State<home> {
 
                     InkWell(
                       child: slider_card1(
-                        'assets/car1.png',
+                        _getImage(widget.index + 1),
+                        carModel(widget.index + 1),
                       ),
                       onTap: () {
                         // Handle card tap
@@ -203,8 +229,8 @@ class _homeState extends State<home> {
                           AppRoutes.car_details,
                           arguments: {
                             'carId': 2, // Example argument
-                            'carName': 'Tesla Model S',
-                            'carImage': 'assets/car.png',
+                            'carName': carModel(widget.index + 1),
+                            'carImage': _getImage(widget.index + 1),
                             'carDescription': 'Electric Luxury Sedan',
                             'carPrice': 12000,
                             'carRating': 4.8,
@@ -216,14 +242,15 @@ class _homeState extends State<home> {
                     SizedBox(width: 10),
                     InkWell(
                       child: slider_card1(
-                        'assets/car.png',
+                        _getImage(widget.index + 2),
+                        carModel(widget.index + 2),
                       ),
                       onTap: () {
                         Navigator.pushNamed(context, AppRoutes.car_details,
                             arguments: {
                               'carId': 3, // Example argument
-                              'carName': 'Ford Mustang',
-                              'carImage': 'assets/car.png',
+                              'carName': carModel(widget.index + 2),
+                              'carImage': _getImage(widget.index + 2),
                               'carDescription': 'Sporty Coupe',
                               'carPrice': 15000,
                               'carRating': 4.7,
@@ -232,13 +259,16 @@ class _homeState extends State<home> {
                     ),
                     SizedBox(width: 10),
                     InkWell(
-                      child: slider_card1('assets/car1.png'),
+                      child: slider_card1(
+                        _getImage(widget.index + 3),
+                        carModel(widget.index + 3),
+                      ),
                       onTap: () {
                         Navigator.pushNamed(context, AppRoutes.car_details,
                             arguments: {
                               'carId': 4, // Example argument
-                              'carName': 'Chevrolet Bolt',
-                              'carImage': 'assets/car.png',
+                              'carName': carModel(widget.index + 3),
+                              'carImage': _getImage(widget.index + 3),
                               'carDescription': 'Compact Electric Car',
                               'carPrice': 9000,
                               'carRating': 4.3,
