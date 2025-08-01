@@ -65,7 +65,7 @@ class home extends StatelessWidget {
                     },
                     children: [
                       Image.asset('assets/car.png', fit: BoxFit.cover),
-                      Image.asset('assets/car.png', fit: BoxFit.cover),
+                      Image.asset('assets/car1.png', fit: BoxFit.cover),
                       Image.asset('assets/car.png', fit: BoxFit.cover),
                     ],
                   ),
@@ -120,7 +120,9 @@ class home extends StatelessWidget {
                   child: Row(
                     children: [
                       InkWell(
-                        child: slider_card1(),
+                        child: slider_card1(
+                          'assets/car.png',
+                        ),
                         onTap: () {
                           // Handle card tap
                           Navigator.pushNamed(
@@ -140,7 +142,9 @@ class home extends StatelessWidget {
                       SizedBox(width: 10),
 
                       InkWell(
-                        child: slider_card1(),
+                        child: slider_card1(
+                          'assets/car1.png',
+                        ),
                         onTap: () {
                           // Handle card tap
                           Navigator.pushNamed(
@@ -160,7 +164,9 @@ class home extends StatelessWidget {
 
                       SizedBox(width: 10),
                       InkWell(
-                        child: slider_card1(),
+                        child: slider_card1(
+                          'assets/car.png',
+                        ),
                         onTap: () {
                           Navigator.pushNamed(context, AppRoutes.car_details,
                               arguments: {
@@ -175,7 +181,7 @@ class home extends StatelessWidget {
                       ),
                       SizedBox(width: 10),
                       InkWell(
-                        child: slider_card1(),
+                        child: slider_card1('assets/car1.png'),
                         onTap: () {
                           Navigator.pushNamed(context, AppRoutes.car_details,
                               arguments: {

@@ -166,7 +166,7 @@ Widget slider_card() {
 }
 
 /////////////////////////////////////
-Widget slider_card1() {
+Widget slider_card1(String imgePath) {
   return Card(
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(16.0),
@@ -181,7 +181,7 @@ Widget slider_card1() {
             ClipRRect(
               borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
               child: Image.asset(
-                'assets/car.png',
+                imgePath,
                 height: 160,
                 width: 300,
                 fit: BoxFit.cover,
