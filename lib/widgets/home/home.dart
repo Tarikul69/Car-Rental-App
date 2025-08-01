@@ -105,6 +105,12 @@ class _homeState extends State<home> {
                           imgPath,
                           width: double.infinity,
                           fit: BoxFit.cover,
+                          errorBuilder: (context, error, stackTrace) {
+                            return Image.asset(
+                              'assets/placeholder.png',
+                              fit: BoxFit.cover,
+                            );
+                          },
                         ),
                       );
                     }).toList(),
@@ -288,7 +294,6 @@ class _homeState extends State<home> {
           ),
         ),
       ),
-      //bottomNavigationBar: CustomBottomNavigationBar(),
     );
   }
 }

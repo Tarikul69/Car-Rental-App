@@ -101,6 +101,12 @@ Widget slider_card() {
                 width: double.infinity,
                 height: 140,
                 fit: BoxFit.cover,
+                errorBuilder: (context, error, stackTrace) {
+                  return Image.asset(
+                    'assets/placeholder.png',
+                    fit: BoxFit.cover,
+                  );
+                },
               ),
             ),
             // Favorite icon (top-left)
@@ -185,6 +191,12 @@ Widget slider_card1(String imgePath, String carModel) {
                 height: 160,
                 width: 300,
                 fit: BoxFit.cover,
+                errorBuilder: (context, error, stackTrace) {
+                  return Image.asset(
+                    'assets/placeholder.png',
+                    fit: BoxFit.cover,
+                  );
+                },
               ),
             ),
             // Discount Tag
