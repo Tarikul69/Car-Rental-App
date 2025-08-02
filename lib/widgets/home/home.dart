@@ -21,9 +21,9 @@ class _homeState extends State<home> {
   int _currentIndex = 0;
 
   final List<String> imageList = [
-    'assets/car.png',
     'assets/car1.png',
     'assets/car.png',
+    'assets/car1.png',
     'assets/car.png',
     'assets/car1.png',
     'assets/car.png',

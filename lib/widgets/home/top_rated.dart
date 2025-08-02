@@ -37,7 +37,19 @@ class top_rated extends StatelessWidget {
                 trailing: Icon(Icons.arrow_forward_ios),
                 onTap: () {
                   // Navigate to vehicle details
-                  Navigator.pushNamed(context, '/car_details');
+                  Navigator.pushNamed(
+                    context,
+                    '/vehicleDetails',
+                    arguments: {
+                      'vehicleId': index + 1,
+                      'vehicleName': 'Vehicle ${index + 1}',
+                      'vehicleImage': 'assets/car.png',
+                      'vehicleDescription':
+                          'Description of vehicle ${index + 1}',
+                      'vehiclePrice': 10000 + (index * 1000),
+                      'vehicleRating': 4.5 - (index * 0.1),
+                    },
+                  );
                 },
               ),
             );

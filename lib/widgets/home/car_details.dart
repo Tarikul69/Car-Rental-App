@@ -11,12 +11,10 @@ class car_details extends StatefulWidget {
 class _car_detailsState extends State<car_details> {
   int _currentIndex = 0;
   final List<String> imageList = [
-    'assets/car.png',
     'assets/car1.png',
     'assets/car.png',
-    'assets/car.png',
     'assets/car1.png',
-    'assets/car.png',
+    'assets/car.png'
   ];
 
   @override
@@ -64,6 +62,12 @@ class _car_detailsState extends State<car_details> {
                         imgPath,
                         width: double.infinity,
                         fit: BoxFit.cover,
+                        errorBuilder: (context, error, stackTrace) {
+                          return Image.asset(
+                            'assets/placeholder.png',
+                            fit: BoxFit.cover,
+                          );
+                        },
                       ),
                     );
                   }).toList(),
