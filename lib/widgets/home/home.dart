@@ -1,6 +1,7 @@
 import 'package:car_rental_app/components/card.dart';
 import 'package:car_rental_app/controllers/home_controller.dart';
 import 'package:car_rental_app/routes/app_routes.dart';
+import 'package:car_rental_app/widgets/bottomnavigation.dart/bottomnavigation.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -19,6 +20,12 @@ class home extends StatefulWidget {
 class _homeState extends State<home> {
   final HomeController homeController = Get.put(HomeController());
   int _currentIndex = 0;
+  int _selectedIndex = 0;
+  final List<Widget> _pages = [
+    Center(child: Text('Home')),
+    Center(child: Text('Favorites')),
+    Center(child: Text('Menu')),
+  ];
 
   final List<String> imageList = [
     'assets/car1.png',
@@ -293,6 +300,12 @@ class _homeState extends State<home> {
             ],
           ),
         ),
+      ),
+      bottomNavigationBar: bottomnavigation(
+        currentIndex: _selectedIndex,
+        onTap: (index) {
+          setState(() => _selectedIndex = index);
+        },
       ),
     );
   }

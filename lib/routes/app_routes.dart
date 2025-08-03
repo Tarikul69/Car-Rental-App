@@ -7,4 +7,5 @@ abstract class AppRoutes {
   static const String top_rated = '/top_rated';
   static const String car_details = '/car_details';
   static const String notifications = '/notifications';
+  static const String menu = '/menu';
 }
