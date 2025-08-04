@@ -8,4 +8,5 @@ abstract class AppRoutes {
   static const String car_details = '/car_details';
   static const String notifications = '/notifications';
   static const String menu = '/menu';
+  static const String trips = '/trips';
 }

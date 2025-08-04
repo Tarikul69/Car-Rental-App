@@ -5,6 +5,7 @@ import 'package:car_rental_app/widgets/bottomnavigation.dart/bottomnavigation.da
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/route_manager.dart';
 
@@ -301,6 +302,15 @@ class _homeState extends State<home> {
           ),
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // Handle floating action button press
+          Get.toNamed(AppRoutes.registration);
+        },
+        child: Icon(Icons.message, color: Colors.white),
+        backgroundColor: Colors.green,
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       bottomNavigationBar: bottomnavigation(
         currentIndex: _selectedIndex,
         onTap: (index) {

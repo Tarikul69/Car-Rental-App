@@ -1,4 +1,5 @@
 import 'package:car_rental_app/routes/app_routes.dart';
+import 'package:car_rental_app/trip/trip.dart';
 import 'package:car_rental_app/widgets/home/car_details.dart';
 import 'package:car_rental_app/widgets/home/home.dart';
 import 'package:car_rental_app/widgets/home/top_rated.dart';
@@ -45,7 +46,11 @@ class AppPages {
       page: () => notifications(),
     ),
     GetPage(
-        name: AppRoutes.menu,
-        page: () => menu()) // Assuming login uses the same widget for now
+      name: AppRoutes.menu,
+      page: () => menu(),
+    ),
+    GetPage(
+        name: AppRoutes.trips,
+        page: () => trip()) // Assuming login uses the same widget for now
   ];
 }

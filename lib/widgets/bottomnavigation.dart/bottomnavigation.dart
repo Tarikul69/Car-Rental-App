@@ -12,10 +12,17 @@ class bottomnavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Define dynamic routes based on index
+    final List<String> routes = ['/home', '/trips', '/menu'];
+
     return BottomNavigationBar(
       backgroundColor: Colors.green,
       currentIndex: currentIndex,
-      onTap: onTap,
+      onTap: (index) {
+        onTap(index); // Call parent state update if needed
+        Navigator.pushNamed(
+            context, routes[index]); // Navigate to dynamic route
+      },
       selectedItemColor: const Color.fromARGB(255, 0, 0, 0),
       unselectedItemColor: const Color.fromARGB(255, 255, 255, 255),
       items: const [
@@ -24,11 +31,11 @@ class bottomnavigation extends StatelessWidget {
           label: 'Home',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.favorite),
-          label: 'Favorites',
+          icon: Icon(Icons.list_alt),
+          label: 'Trips',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.person),
+          icon: Icon(Icons.menu),
           label: 'Menu',
         ),
       ],
