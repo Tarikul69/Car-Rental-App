@@ -10,6 +10,12 @@ class forgetpassword extends StatelessWidget {
       appBar: AppBar(
         title: Text("Forget Password"),
         backgroundColor: Colors.green,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
       ),
       body: Center(
         child: Padding(
@@ -30,15 +36,24 @@ class forgetpassword extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
-              ElevatedButton(
-                onPressed: () {
-                  // Logic to handle password reset
-                },
-                child: Text("Reset Password"),
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
-              ),
             ],
           ),
+        ),
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.fromLTRB(10, 10, 10, 22),
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            minimumSize: const Size.fromHeight(55),
+            backgroundColor: Colors.green,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
+            elevation: 4,
+          ),
+          onPressed: () {},
+          child: const Text('Send Email',
+              style: TextStyle(fontSize: 16, color: Colors.white)),
         ),
       ),
     );

@@ -9,4 +9,5 @@ abstract class AppRoutes {
   static const String notifications = '/notifications';
   static const String menu = '/menu';
   static const String trips = '/trips';
+  static const String message = '/message';
 }

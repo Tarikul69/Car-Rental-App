@@ -4,6 +4,7 @@ import 'package:car_rental_app/routes/app_routes.dart';
 import 'package:car_rental_app/widgets/bottomnavigation.dart/bottomnavigation.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:get/get.dart';
 import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -69,7 +70,7 @@ class _homeState extends State<home> {
                 color: const Color.fromARGB(255, 53, 49, 49),
                 fontWeight: FontWeight.bold,
               )),
-          subtitle: Text("Delhi, India",
+          subtitle: Text("NewYork, USA",
               style: TextStyle(
                 color: const Color.fromARGB(255, 53, 49, 49),
               )),
@@ -302,13 +303,25 @@ class _homeState extends State<home> {
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          // Handle floating action button press
-          Get.toNamed(AppRoutes.registration);
-        },
-        child: Icon(Icons.message, color: Colors.white),
+      //Floating Action Button for quick actions
+      floatingActionButton: SpeedDial(
+        animatedIcon: AnimatedIcons.add_event,
         backgroundColor: Colors.green,
+        overlayOpacity: 0.4,
+        spacing: 12,
+        children: [
+          SpeedDialChild(
+            backgroundColor: Colors.green,
+            child: Icon(Icons.message),
+            onTap: () {
+              Get.toNamed(AppRoutes.message);
+            },
+          ),
+          SpeedDialChild(
+            backgroundColor: Colors.green,
+            child: Icon(Icons.call),
+          ),
+        ],
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       bottomNavigationBar: bottomnavigation(
