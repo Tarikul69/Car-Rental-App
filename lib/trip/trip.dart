@@ -25,7 +25,7 @@ class trip extends StatelessWidget {
         ],
       ),
       body: Container(
-        padding: EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(10.0),
         child: ListView.builder(
           itemCount: 10, // Example item count
           itemBuilder: (context, index) {
