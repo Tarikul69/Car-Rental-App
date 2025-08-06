@@ -61,6 +61,7 @@ class _loginState extends State<login> {
               color: Colors.black,
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text("Don't have account?"),
                 textButton(

@@ -5,9 +5,6 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:get/get.dart';
-import 'package:get/get_connect/http/src/utils/utils.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/route_manager.dart';
 
 class home extends StatefulWidget {
   final int index = 0;
@@ -21,12 +18,6 @@ class home extends StatefulWidget {
 class _homeState extends State<home> {
   final HomeController homeController = Get.put(HomeController());
   int _currentIndex = 0;
-  int _selectedIndex = 0;
-  final List<Widget> _pages = [
-    Center(child: Text('Home')),
-    Center(child: Text('Favorites')),
-    Center(child: Text('Menu')),
-  ];
 
   final List<String> imageList = [
     'assets/car1.png',
@@ -323,12 +314,6 @@ class _homeState extends State<home> {
         ],
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
-      // bottomNavigationBar: bottomnavigation(
-      //   currentIndex: _selectedIndex,
-      //   onTap: (index) {
-      //     setState(() => _selectedIndex = index);
-      //   },
-      // ),
     );
   }
 }

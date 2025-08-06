@@ -157,6 +157,14 @@ class _AnimatedNotificationCardState extends State<AnimatedNotificationCard> {
                           height: 140,
                           width: double.infinity,
                           fit: BoxFit.cover,
+                          errorBuilder: (context, error, stackTrace) {
+                            return Image.asset(
+                              'assets/placeholder.png',
+                              height: 140,
+                              width: double.infinity,
+                              fit: BoxFit.cover,
+                            );
+                          },
                         ),
                       ),
                       const SizedBox(height: 10),

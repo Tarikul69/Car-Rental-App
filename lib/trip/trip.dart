@@ -1,4 +1,7 @@
+import 'package:car_rental_app/components/card.dart';
+import 'package:car_rental_app/routes/app_routes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class trip extends StatelessWidget {
   const trip({super.key});
@@ -7,12 +10,10 @@ class trip extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Top Rated Vehicles'),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.pop(context);
-          },
+        title: Text(
+          'Trip Details',
+          style: TextStyle(
+              color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),
         ),
         backgroundColor: Colors.green,
         actions: [
@@ -24,36 +25,52 @@ class trip extends StatelessWidget {
           ),
         ],
       ),
-      body: Container(
-        padding: EdgeInsets.all(10.0),
-        child: ListView.builder(
-          itemCount: 10, // Example item count
-          itemBuilder: (context, index) {
-            return Card(
-              child: ListTile(
-                leading: Icon(Icons.directions_car),
-                title: Text('Vehicle ${index + 1}'),
-                subtitle: Text('Description of vehicle ${index + 1}'),
-                trailing: Icon(Icons.arrow_forward_ios),
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Container(
+          padding: EdgeInsets.all(10.0),
+          child: Column(
+            children: [
+              SizedBox(height: 5),
+              InkWell(
                 onTap: () {
-                  // Navigate to vehicle details
-                  Navigator.pushNamed(
-                    context,
-                    '/vehicleDetails',
-                    arguments: {
-                      'vehicleId': index + 1,
-                      'vehicleName': 'Vehicle ${index + 1}',
-                      'vehicleImage': 'assets/car.png',
-                      'vehicleDescription':
-                          'Description of vehicle ${index + 1}',
-                      'vehiclePrice': 10000 + (index * 1000),
-                      'vehicleRating': 4.5 - (index * 0.1),
-                    },
-                  );
+                  Get.toNamed(AppRoutes.car_details);
                 },
+                child: trip_card(
+                  imgePath: 'assets/car1.png',
+                  carModel: 'Toyota Camry',
+                  carDescription: 'A comfortable and spacious car.',
+                  newTag: "New",
+                  //carPrice: '30.0',
+                ),
               ),
-            );
-          },
+              SizedBox(height: 10),
+              InkWell(
+                onTap: () {
+                  Get.toNamed(AppRoutes.car_details);
+                },
+                child: trip_card(
+                  imgePath: 'assets/car1.png',
+                  carModel: 'Honda Accord',
+                  carDescription: 'A reliable and efficient sedan.',
+                  newTag: "Old",
+                ),
+              ),
+              SizedBox(height: 10),
+              InkWell(
+                onTap: () {
+                  Get.toNamed(AppRoutes.car_details);
+                },
+                child: trip_card(
+                  imgePath: 'assets/car.png',
+                  carModel: 'Ford Focus',
+                  carDescription: 'A compact and sporty hatchback.',
+                  newTag: "New",
+                ),
+              ),
+              SizedBox(height: 10),
+            ],
+          ),
         ),
       ),
     );

@@ -1,3 +1,4 @@
+import 'package:car_rental_app/components/card.dart';
 import 'package:flutter/material.dart';
 
 class top_rated extends StatelessWidget {
@@ -7,7 +8,11 @@ class top_rated extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Top Rated Vehicles'),
+        title: Text(
+          'Top Rated Vehicles',
+          style: TextStyle(
+              color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),
+        ),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
@@ -24,36 +29,71 @@ class top_rated extends StatelessWidget {
           ),
         ],
       ),
-      body: Container(
-        padding: EdgeInsets.all(16.0),
-        child: ListView.builder(
-          itemCount: 10, // Example item count
-          itemBuilder: (context, index) {
-            return Card(
-              child: ListTile(
-                leading: Icon(Icons.directions_car),
-                title: Text('Vehicle ${index + 1}'),
-                subtitle: Text('Description of vehicle ${index + 1}'),
-                trailing: Icon(Icons.arrow_forward_ios),
-                onTap: () {
-                  // Navigate to vehicle details
-                  Navigator.pushNamed(
-                    context,
-                    '/vehicleDetails',
-                    arguments: {
-                      'vehicleId': index + 1,
-                      'vehicleName': 'Vehicle ${index + 1}',
-                      'vehicleImage': 'assets/car.png',
-                      'vehicleDescription':
-                          'Description of vehicle ${index + 1}',
-                      'vehiclePrice': 10000 + (index * 1000),
-                      'vehicleRating': 4.5 - (index * 0.1),
-                    },
-                  );
-                },
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Container(
+          padding: EdgeInsets.all(10.0),
+          child: Column(
+            children: [
+              SizedBox(height: 5),
+              slider_card(
+                imgePath: 'assets/car1.png',
+                carModel: 'Toyota Camry',
+                carDescription: 'A comfortable and spacious car.',
+                newTag: "New",
+                carRating: 4.5,
               ),
-            );
-          },
+              SizedBox(height: 10),
+              slider_card(
+                imgePath: 'assets/car1.png',
+                carModel: 'Honda Accord',
+                carDescription: 'A reliable and efficient sedan.',
+                newTag: "Old",
+                carRating: 5.0,
+              ),
+              SizedBox(height: 10),
+              slider_card(
+                imgePath: 'assets/car.png',
+                carModel: 'Ford Focus',
+                carDescription: 'A compact and sporty hatchback.',
+                newTag: "New",
+                carRating: 4.9,
+              ),
+              SizedBox(height: 10),
+              slider_card(
+                imgePath: 'assets/car.png',
+                carModel: 'Chevrolet Malibu',
+                carDescription: 'A stylish and efficient sedan.',
+                newTag: "New",
+                carRating: 4.8,
+              ),
+              SizedBox(height: 10),
+              slider_card(
+                imgePath: 'assets/car1.png',
+                carModel: 'Nissan Altima',
+                carDescription: 'A comfortable and reliable sedan.',
+                newTag: "New",
+                carRating: 4.6,
+              ),
+              SizedBox(height: 10),
+              slider_card(
+                imgePath: 'assets/car1.png',
+                carModel: 'Mazda 6',
+                carDescription: 'A sporty and stylish sedan.',
+                newTag: "New",
+                carRating: 4.7,
+              ),
+              SizedBox(height: 10),
+              slider_card(
+                imgePath: 'assets/car.png',
+                carModel: 'Subaru Legacy',
+                carDescription: 'A reliable and all-wheel-drive sedan.',
+                newTag: "New",
+                carRating: 4.5,
+              ),
+              SizedBox(height: 10),
+            ],
+          ),
         ),
       ),
     );

@@ -67,7 +67,7 @@ class _registrationState extends State<registration> {
                 //message: "Confirm Password",
               ),
               SizedBox(
-                height: 15,
+                height: 55,
               ),
               elevatedButton(
                 text: "Registration",

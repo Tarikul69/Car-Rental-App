@@ -82,7 +82,16 @@ Widget notificationCard({
 /////////////////////////
 //////slider card///////
 ///////////////////////
-Widget slider_card() {
+Widget slider_card({
+  String imgePath = "assets/car.png",
+  String carModel = "Toyota Camry",
+  String carDescription = "A comfortable and spacious sedan.",
+  double carPrice = 60.0,
+  double carRating = 4.5,
+  String offerTag = "20% OFF",
+  String newTag = "NEW",
+  bool isFavorite = false,
+}) {
   return Card(
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(12.0),
@@ -97,7 +106,7 @@ Widget slider_card() {
             ClipRRect(
               borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
               child: Image.asset(
-                'assets/car.png',
+                imgePath,
                 width: double.infinity,
                 height: 140,
                 fit: BoxFit.cover,
@@ -125,11 +134,11 @@ Widget slider_card() {
               child: Container(
                 padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                 decoration: BoxDecoration(
-                  color: Colors.orange,
+                  color: const Color.fromARGB(255, 234, 173, 82),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Text(
-                  'Offer',
+                  offerTag,
                   style: TextStyle(color: Colors.white, fontSize: 12),
                 ),
               ),
@@ -145,7 +154,7 @@ Widget slider_card() {
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Text(
-                  'New',
+                  newTag,
                   style: TextStyle(color: Colors.white, fontSize: 12),
                 ),
               ),
@@ -155,10 +164,10 @@ Widget slider_card() {
         SizedBox(
           height: 70,
           child: ListTile(
-            title: Text('Car Model 2'),
+            title: Text(carModel),
             subtitle: Text('Available for rent'),
             trailing: Text(
-              '\$60/day',
+              '\$$carPrice/day | Rating: $carRating',
               style: TextStyle(
                 color: Colors.green,
                 fontWeight: FontWeight.bold,
@@ -172,10 +181,13 @@ Widget slider_card() {
 }
 
 /////////////////////////////////////
+/////////slider card1////////////
+/////////////////////////////////////
+// This is a simplified version of the slider card with fewer features.
 Widget slider_card1(String imgePath, String carModel) {
   return Card(
     shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(16.0),
+      borderRadius: BorderRadius.circular(10.0),
     ),
     elevation: 1,
     child: Column(
@@ -188,8 +200,8 @@ Widget slider_card1(String imgePath, String carModel) {
               borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
               child: Image.asset(
                 imgePath,
-                height: 160,
-                width: 300,
+                height: double.infinity,
+                width: 100,
                 fit: BoxFit.cover,
                 errorBuilder: (context, error, stackTrace) {
                   return Image.asset(
@@ -318,5 +330,109 @@ Widget invitation_card(BuildContext context) {
             ),
           ],
         )),
+  );
+}
+
+/////////////////////////////////
+/////////trip Details///////////
+///////////////////////////////
+Widget trip_card({
+  String imgePath = "assets/car.png",
+  String carModel = "Toyota Camry",
+  String carDescription = "A comfortable and spacious sedan.",
+  double carPrice = 60.0,
+  double carRating = 4.5,
+  String offerTag = "20% OFF",
+  String newTag = "NEW",
+  bool isFavorite = false,
+}) {
+  return Card(
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(12.0),
+    ),
+    elevation: 4,
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Stack(
+          children: [
+            // Rounded image
+            ClipRRect(
+              borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
+              child: Image.asset(
+                imgePath,
+                width: double.infinity,
+                height: 140,
+                fit: BoxFit.cover,
+                errorBuilder: (context, error, stackTrace) {
+                  return Image.asset(
+                    'assets/placeholder.png',
+                    fit: BoxFit.cover,
+                  );
+                },
+              ),
+            ),
+            // Favorite icon (top-left)
+            Positioned(
+              top: 8,
+              left: 8,
+              child: CircleAvatar(
+                backgroundColor: Colors.white70,
+                child: Icon(Icons.favorite_border, color: Colors.red),
+              ),
+            ),
+            // "Offer" tag (top-right)
+            Positioned(
+              top: 8,
+              right: 70,
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 234, 173, 82),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Text(
+                  offerTag,
+                  style: TextStyle(color: Colors.white, fontSize: 12),
+                ),
+              ),
+            ),
+            // "New" tag (top-right)
+            Positioned(
+              top: 8,
+              right: 8,
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                decoration: BoxDecoration(
+                  color: Colors.green,
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Text(
+                  newTag,
+                  style: TextStyle(color: Colors.white, fontSize: 12),
+                ),
+              ),
+            ),
+          ],
+        ),
+        SizedBox(
+          height: 70,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ListTile(
+              title: Text(carModel),
+              subtitle: Text(carDescription),
+              trailing: Text(
+                '\$$carPrice/day',
+                style: TextStyle(
+                  color: Colors.green,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
+        ),
+      ],
+    ),
   );
 }
