@@ -10,6 +10,7 @@ import 'package:car_rental_app/widgets/menu/menu.dart';
 import 'package:car_rental_app/widgets/message/message.dart';
 import 'package:car_rental_app/widgets/notifications/notifications.dart';
 import 'package:car_rental_app/widgets/splash_screen/splash_screen.dart';
+import 'package:car_rental_app/widgets/bottomnavigation.dart/start.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
 
 class AppPages {
@@ -57,6 +58,10 @@ class AppPages {
     GetPage(
       name: AppRoutes.message,
       page: () => message(),
+    ),
+    GetPage(
+      name: AppRoutes.start,
+      page: () => start(),
     ) // Assuming login uses the same widget for now
   ];
 }

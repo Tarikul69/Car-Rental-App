@@ -1,7 +1,6 @@
 import 'package:car_rental_app/components/card.dart';
 import 'package:car_rental_app/controllers/home_controller.dart';
 import 'package:car_rental_app/routes/app_routes.dart';
-import 'package:car_rental_app/widgets/bottomnavigation.dart/bottomnavigation.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
@@ -324,12 +323,12 @@ class _homeState extends State<home> {
         ],
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
-      bottomNavigationBar: bottomnavigation(
-        currentIndex: _selectedIndex,
-        onTap: (index) {
-          setState(() => _selectedIndex = index);
-        },
-      ),
+      // bottomNavigationBar: bottomnavigation(
+      //   currentIndex: _selectedIndex,
+      //   onTap: (index) {
+      //     setState(() => _selectedIndex = index);
+      //   },
+      // ),
     );
   }
 }

@@ -1,4 +1,3 @@
-import 'package:car_rental_app/widgets/bottomnavigation.dart/bottomnavigation.dart';
 import 'package:flutter/material.dart';
 
 class menu extends StatefulWidget {
@@ -13,22 +12,39 @@ class _menuState extends State<menu> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Menu'),
-        backgroundColor: Colors.green,
-      ),
-      body: Center(
-        child: Text(
-          'This is the Menu Page...',
-          style: TextStyle(fontSize: 24, color: Colors.black),
+        appBar: AppBar(
+          title: const Text('Menu'),
+          backgroundColor: Colors.green,
         ),
-      ),
-      bottomNavigationBar: bottomnavigation(
-        currentIndex: _selectedIndex,
-        onTap: (index) {
-          setState(() => _selectedIndex = index);
-        },
-      ),
-    );
+        body: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Container(
+            padding: EdgeInsets.all(1),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Center(
+                  child: Text(
+                    'This is the Menu Page...',
+                    style: TextStyle(fontSize: 24, color: Colors.black),
+                  ),
+                ),
+                SizedBox(height: 20),
+                ElevatedButton(
+                  onPressed: () {
+                    // Add your button action here
+                  },
+                  child: Text('Button 1'),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    // Add your button action here
+                  },
+                  child: Text('Button 2'),
+                ),
+              ],
+            ),
+          ),
+        ));
   }
 }
