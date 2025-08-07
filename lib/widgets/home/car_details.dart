@@ -179,7 +179,11 @@ class _car_detailsState extends State<car_details> {
             ),
             elevation: 4,
           ),
-          onPressed: () {},
+          onPressed: () {
+            // Handle rent action
+            Navigator.pushNamed(context, '/contact_form',
+                arguments: {'carModel': 'Toyota Prius Hybrid 2022'});
+          },
           child: const Text('Rent This Vehicle',
               style: TextStyle(fontSize: 16, color: Colors.white)),
         ),
