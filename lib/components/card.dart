@@ -197,11 +197,11 @@ Widget slider_card1(String imgePath, String carModel) {
           children: [
             // Car Image
             ClipRRect(
-              borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
+              borderRadius: BorderRadius.vertical(top: Radius.circular(10)),
               child: Image.asset(
                 imgePath,
-                height: double.infinity,
-                width: 100,
+                height: 120, // constrained height
+                width: 185,
                 fit: BoxFit.cover,
                 errorBuilder: (context, error, stackTrace) {
                   return Image.asset(
@@ -253,7 +253,111 @@ Widget slider_card1(String imgePath, String carModel) {
               ),
             ),
             // Info Icon
+            const Positioned(
+              bottom: 10,
+              right: 10,
+              child: CircleAvatar(
+                backgroundColor: Colors.white,
+                child: Icon(Icons.info_outline, color: Colors.purple),
+              ),
+            ),
+          ],
+        ),
+
+        // Title and Subtitle
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 4),
+          child: Text(
+            carModel,
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 12.0),
+          child: Text(
+            'RideMaster Taxis',
+            style: TextStyle(color: Colors.grey[600], fontSize: 12),
+          ),
+        ),
+        SizedBox(
+          height: 10,
+        )
+      ],
+    ),
+  );
+}
+
+//#######################################################################
+Widget slider_card2(String imgePath, String carModel) {
+  return Card(
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(10.0),
+    ),
+    elevation: 1,
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Stack(
+          children: [
+            // Car Image
+            ClipRRect(
+              borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
+              child: Image.asset(
+                imgePath,
+                height: double.infinity,
+                width: 100,
+                fit: BoxFit.cover,
+                errorBuilder: (context, error, stackTrace) {
+                  return Image.asset(
+                    'assets/placeholder.png',
+                    fit: BoxFit.cover,
+                  );
+                },
+              ),
+            ),
+            // Discount Tag
             Positioned(
+              top: 10,
+              left: null,
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                decoration: BoxDecoration(
+                  color: Colors.redAccent,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Text(
+                  '20% OFF',
+                  style: TextStyle(color: Colors.white, fontSize: 12),
+                ),
+              ),
+            ),
+            // NEW Tag
+            Positioned(
+              top: 40,
+              left: null,
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                decoration: BoxDecoration(
+                  color: Colors.orange,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Text(
+                  'NEW',
+                  style: TextStyle(color: Colors.white, fontSize: 12),
+                ),
+              ),
+            ),
+            // Favorite Icon
+            const Positioned(
+              top: 10,
+              right: 10,
+              child: CircleAvatar(
+                backgroundColor: Colors.white,
+                child: Icon(Icons.favorite_border, color: Colors.green),
+              ),
+            ),
+            // Info Icon
+            const Positioned(
               bottom: 10,
               right: 10,
               child: CircleAvatar(
