@@ -83,15 +83,24 @@ class _menuState extends State<menu> {
                                   Navigator.pushNamed(context, '/profile');
                                 },
                                 child: Padding(
-                                  padding:
-                                      const EdgeInsets.fromLTRB(0, 30, 0, 30),
-                                  child: Text(
-                                    'Profile',
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 25,
-                                      fontWeight: FontWeight.bold,
+                                  padding: const EdgeInsets.all(10),
+                                  child: ListTile(
+                                    title: Text(
+                                      '1000',
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 25,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    subtitle: Text(
+                                      'Points Earned',
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        color: Colors.white70,
+                                        fontSize: 14,
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -130,23 +139,176 @@ class _menuState extends State<menu> {
                     ],
                   ),
                 ),
-                SizedBox(height: 20),
-                Card(
-                  elevation: 1,
-                  color: const Color.fromARGB(255, 104, 107, 104),
-                  child: InkWell(
-                    onTap: () {
-                      Navigator.pushNamed(context, '/about');
-                    },
-                    child: Padding(
-                      padding: const EdgeInsets.all(20.0),
-                      child: Text(
-                        'About Us',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold,
+                SizedBox(height: 5),
+                Container(
+                  width: Get.width * 0.95,
+                  child: Card(
+                    elevation: 1,
+                    color: const Color.fromARGB(255, 104, 107, 104),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/about');
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: ListTile(
+                          leading: Icon(Icons.person, color: Colors.white),
+                          title: Text(
+                            'Profile',
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          trailing: Icon(Icons.arrow_forward_ios,
+                              color: Colors.white),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Container(
+                  width: Get.width * 0.95,
+                  child: Card(
+                    elevation: 1,
+                    color: const Color.fromARGB(255, 104, 107, 104),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/about');
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: ListTile(
+                          leading: Icon(Icons.person, color: Colors.white),
+                          title: Text(
+                            'Profile',
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          trailing: Icon(Icons.arrow_forward_ios,
+                              color: Colors.white),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Container(
+                  width: Get.width * 0.95,
+                  child: Card(
+                    elevation: 1,
+                    color: const Color.fromARGB(255, 104, 107, 104),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/about');
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: ListTile(
+                          leading: Icon(Icons.person, color: Colors.white),
+                          title: Text(
+                            'Profile',
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          trailing: Icon(Icons.arrow_forward_ios,
+                              color: Colors.white),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Container(
+                  width: Get.width * 0.95,
+                  child: Card(
+                    elevation: 1,
+                    color: const Color.fromARGB(255, 104, 107, 104),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/about');
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: ListTile(
+                          leading: Icon(Icons.person, color: Colors.white),
+                          title: Text(
+                            'Profile',
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          trailing: Icon(Icons.arrow_forward_ios,
+                              color: Colors.white),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Container(
+                  width: Get.width * 0.95,
+                  child: Card(
+                    elevation: 1,
+                    color: const Color.fromARGB(255, 104, 107, 104),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/about');
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: ListTile(
+                          leading: Icon(Icons.person, color: Colors.white),
+                          title: Text(
+                            'Profile',
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          trailing: Icon(Icons.arrow_forward_ios,
+                              color: Colors.white),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Container(
+                  width: Get.width * 0.95,
+                  child: Card(
+                    elevation: 1,
+                    color: const Color.fromARGB(255, 104, 107, 104),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/about');
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: ListTile(
+                          leading: Icon(Icons.person, color: Colors.white),
+                          title: Text(
+                            'Profile',
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          trailing: Icon(Icons.arrow_forward_ios,
+                              color: Colors.white),
                         ),
                       ),
                     ),
