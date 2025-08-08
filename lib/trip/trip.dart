@@ -34,7 +34,13 @@ class trip extends StatelessWidget {
               SizedBox(height: 5),
               InkWell(
                 onTap: () {
-                  Get.toNamed(AppRoutes.car_details);
+                  Get.toNamed(AppRoutes.car_details, arguments: {
+                    'carModel': 'Toyota Prius',
+                    'imagePath': 'assets/car1.png',
+                    'carDescription':
+                        'A hybrid car with excellent fuel efficiency.',
+                    'carRent': 'Daily Rent: \$55.00',
+                  });
                 },
                 child: trip_card(
                   imgePath: 'assets/car1.png',
@@ -47,7 +53,13 @@ class trip extends StatelessWidget {
               SizedBox(height: 10),
               InkWell(
                 onTap: () {
-                  Get.toNamed(AppRoutes.car_details);
+                  Get.toNamed(AppRoutes.car_details, arguments: {
+                    'carModel': 'Honda Accord',
+                    'imagePath': 'assets/car1.png',
+                    'carDescription':
+                        'A reliable and efficient sedan with advanced features.',
+                    'carRent': 'Daily Rent: \$60.00',
+                  });
                 },
                 child: trip_card(
                   imgePath: 'assets/car1.png',
@@ -59,7 +71,13 @@ class trip extends StatelessWidget {
               SizedBox(height: 10),
               InkWell(
                 onTap: () {
-                  Get.toNamed(AppRoutes.car_details);
+                  Get.toNamed(AppRoutes.car_details, arguments: {
+                    'carModel': 'Ford Focus',
+                    'imagePath': 'assets/car.png',
+                    'carDescription':
+                        'A compact and sporty hatchback with great handling.',
+                    'carRent': 'Daily Rent: \$50.00',
+                  });
                 },
                 child: trip_card(
                   imgePath: 'assets/car.png',

@@ -134,7 +134,7 @@ class _car_detailsState extends State<car_details> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    args['carModel'] ?? 'Toyota Prius Hybrid 2022',
+                    args['carModel'] ?? 'Toyota',
                     style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
@@ -185,8 +185,13 @@ class _car_detailsState extends State<car_details> {
           ),
           onPressed: () {
             // Handle rent action
-            Navigator.pushNamed(context, '/contact_form',
-                arguments: {'carModel': 'Toyota Prius Hybrid 2022'});
+            Navigator.pushNamed(context, '/contact_form', arguments: {
+              'carModel': args['carModel'] ?? 'Toyota',
+              'imagePath': args['imagePath'] ?? 'assets/car1.png',
+              'carDescription': args['carDescription'] ??
+                  'This hybrid car offers excellent fuel efficiency.',
+              'carRent': args['carRent'] ?? 'Daily Rent: \$55.00',
+            });
           },
           child: const Text('Rent This Vehicle',
               style: TextStyle(fontSize: 16, color: Colors.white)),

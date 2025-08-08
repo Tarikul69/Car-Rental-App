@@ -59,7 +59,10 @@ class top_rated extends StatelessWidget {
                 onTap: () {
                   Navigator.pushNamed(context, '/car_details', arguments: {
                     'carModel': 'Honda Accord 2022',
-                    'imagePath': 'assets/car1.png'
+                    'imagePath': 'assets/car1.png',
+                    'carDescription':
+                        'A reliable and efficient sedan with advanced features.',
+                    'carRent': 'Daily Rent: \$60.00',
                   });
                 },
                 child: slider_card(
@@ -75,7 +78,10 @@ class top_rated extends StatelessWidget {
                 onTap: () {
                   Navigator.pushNamed(context, '/car_details', arguments: {
                     'carModel': 'Ford Focus 2022',
-                    'imagePath': 'assets/car.png'
+                    'imagePath': 'assets/car.png',
+                    'carDescription':
+                        'A compact and sporty hatchback with great handling.',
+                    'carRent': 'Daily Rent: \$50.00',
                   });
                 },
                 child: slider_card(
@@ -91,7 +97,10 @@ class top_rated extends StatelessWidget {
                 onTap: () {
                   Navigator.pushNamed(context, '/car_details', arguments: {
                     'carModel': 'Chevrolet Malibu 2022',
-                    'imagePath': 'assets/car.png'
+                    'imagePath': 'assets/car.png',
+                    'carDescription':
+                        'A stylish and efficient sedan with modern features.',
+                    'carRent': 'Daily Rent: \$65.00',
                   });
                 },
                 child: slider_card(
@@ -107,7 +116,10 @@ class top_rated extends StatelessWidget {
                 onTap: () {
                   Navigator.pushNamed(context, '/car_details', arguments: {
                     'carModel': 'Nissan Altima 2022',
-                    'imagePath': 'assets/car1.png'
+                    'imagePath': 'assets/car1.png',
+                    'carDescription':
+                        'A comfortable and reliable sedan with advanced safety features.',
+                    'carRent': 'Daily Rent: \$55.00',
                   });
                 },
                 child: slider_card(
@@ -123,7 +135,10 @@ class top_rated extends StatelessWidget {
                 onTap: () {
                   Navigator.pushNamed(context, '/car_details', arguments: {
                     'carModel': 'Mazda 6 2022',
-                    'imagePath': 'assets/car1.png'
+                    'imagePath': 'assets/car1.png',
+                    'carDescription':
+                        'A sporty and stylish sedan with great performance.',
+                    'carRent': 'Daily Rent: \$70.00',
                   });
                 },
                 child: slider_card(
@@ -139,7 +154,9 @@ class top_rated extends StatelessWidget {
                 onTap: () {
                   Navigator.pushNamed(context, '/car_details', arguments: {
                     'carModel': 'Subaru Legacy 2022',
-                    'imagePath': 'assets/car.png'
+                    'imagePath': 'assets/car.png',
+                    'carDescription': 'A reliable and all-wheel-drive sedan.',
+                    'carRent': 'Daily Rent: \$65.00',
                   });
                 },
                 child: slider_card(
