@@ -36,60 +36,119 @@ class top_rated extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(height: 5),
-              slider_card(
-                imgePath: 'assets/car1.png',
-                carModel: 'Toyota Camry',
-                carDescription: 'A comfortable and spacious car.',
-                newTag: "New",
-                carRating: 4.5,
+              InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, '/car_details', arguments: {
+                    'carModel': 'Toyota Prius Hybrid 2022',
+                    'imagePath': 'assets/car1.png',
+                    'carDescription':
+                        'A hybrid car with excellent fuel efficiency.',
+                    'carRent': 'Daily Rent: \$55.00',
+                  });
+                },
+                child: slider_card(
+                  imgePath: 'assets/car1.png',
+                  carModel: 'Toyota Prius',
+                  carDescription: 'A comfortable and spacious car.',
+                  newTag: "New",
+                  carRating: 4.5,
+                ),
               ),
               SizedBox(height: 10),
-              slider_card(
-                imgePath: 'assets/car1.png',
-                carModel: 'Honda Accord',
-                carDescription: 'A reliable and efficient sedan.',
-                newTag: "Old",
-                carRating: 5.0,
+              InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, '/car_details', arguments: {
+                    'carModel': 'Honda Accord 2022',
+                    'imagePath': 'assets/car1.png'
+                  });
+                },
+                child: slider_card(
+                  imgePath: 'assets/car1.png',
+                  carModel: 'Honda Accord',
+                  carDescription: 'A reliable and efficient sedan.',
+                  newTag: "Old",
+                  carRating: 5.0,
+                ),
               ),
               SizedBox(height: 10),
-              slider_card(
-                imgePath: 'assets/car.png',
-                carModel: 'Ford Focus',
-                carDescription: 'A compact and sporty hatchback.',
-                newTag: "New",
-                carRating: 4.9,
+              InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, '/car_details', arguments: {
+                    'carModel': 'Ford Focus 2022',
+                    'imagePath': 'assets/car.png'
+                  });
+                },
+                child: slider_card(
+                  imgePath: 'assets/car.png',
+                  carModel: 'Ford Focus',
+                  carDescription: 'A compact and sporty hatchback.',
+                  newTag: "New",
+                  carRating: 4.9,
+                ),
               ),
               SizedBox(height: 10),
-              slider_card(
-                imgePath: 'assets/car.png',
-                carModel: 'Chevrolet Malibu',
-                carDescription: 'A stylish and efficient sedan.',
-                newTag: "New",
-                carRating: 4.8,
+              InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, '/car_details', arguments: {
+                    'carModel': 'Chevrolet Malibu 2022',
+                    'imagePath': 'assets/car.png'
+                  });
+                },
+                child: slider_card(
+                  imgePath: 'assets/car.png',
+                  carModel: 'Chevrolet Malibu',
+                  carDescription: 'A stylish and efficient sedan.',
+                  newTag: "New",
+                  carRating: 4.8,
+                ),
               ),
               SizedBox(height: 10),
-              slider_card(
-                imgePath: 'assets/car1.png',
-                carModel: 'Nissan Altima',
-                carDescription: 'A comfortable and reliable sedan.',
-                newTag: "New",
-                carRating: 4.6,
+              InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, '/car_details', arguments: {
+                    'carModel': 'Nissan Altima 2022',
+                    'imagePath': 'assets/car1.png'
+                  });
+                },
+                child: slider_card(
+                  imgePath: 'assets/car1.png',
+                  carModel: 'Nissan Altima',
+                  carDescription: 'A comfortable and reliable sedan.',
+                  newTag: "New",
+                  carRating: 4.6,
+                ),
               ),
               SizedBox(height: 10),
-              slider_card(
-                imgePath: 'assets/car1.png',
-                carModel: 'Mazda 6',
-                carDescription: 'A sporty and stylish sedan.',
-                newTag: "New",
-                carRating: 4.7,
+              InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, '/car_details', arguments: {
+                    'carModel': 'Mazda 6 2022',
+                    'imagePath': 'assets/car1.png'
+                  });
+                },
+                child: slider_card(
+                  imgePath: 'assets/car1.png',
+                  carModel: 'Mazda 6',
+                  carDescription: 'A sporty and stylish sedan.',
+                  newTag: "New",
+                  carRating: 4.7,
+                ),
               ),
               SizedBox(height: 10),
-              slider_card(
-                imgePath: 'assets/car.png',
-                carModel: 'Subaru Legacy',
-                carDescription: 'A reliable and all-wheel-drive sedan.',
-                newTag: "New",
-                carRating: 4.5,
+              InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, '/car_details', arguments: {
+                    'carModel': 'Subaru Legacy 2022',
+                    'imagePath': 'assets/car.png'
+                  });
+                },
+                child: slider_card(
+                  imgePath: 'assets/car.png',
+                  carModel: 'Subaru Legacy',
+                  carDescription: 'A reliable and all-wheel-drive sedan.',
+                  newTag: "New",
+                  carRating: 4.5,
+                ),
               ),
               SizedBox(height: 10),
             ],

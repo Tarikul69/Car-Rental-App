@@ -43,7 +43,7 @@ class _menuState extends State<menu> {
                           color: const Color.fromARGB(255, 104, 107, 104),
                           child: InkWell(
                             onTap: () {
-                              Navigator.pushNamed(context, '/home');
+                              //Navigator.pushNamed(context, '/home');
                             },
                             child: Padding(
                               padding: const EdgeInsets.fromLTRB(0, 65, 0, 50),

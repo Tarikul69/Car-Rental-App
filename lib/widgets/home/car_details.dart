@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 class car_details extends StatefulWidget {
   const car_details({Key? key}) : super(key: key);
@@ -9,6 +11,7 @@ class car_details extends StatefulWidget {
 }
 
 class _car_detailsState extends State<car_details> {
+  final args = Get.arguments;
   int _currentIndex = 0;
   final List<String> imageList = [
     'assets/car1.png',
@@ -59,7 +62,7 @@ class _car_detailsState extends State<car_details> {
                     return ClipRRect(
                       borderRadius: BorderRadius.circular(0),
                       child: Image.asset(
-                        imgPath,
+                        args['carModel'] ?? imgPath,
                         width: double.infinity,
                         fit: BoxFit.cover,
                         errorBuilder: (context, error, stackTrace) {
@@ -129,21 +132,21 @@ class _car_detailsState extends State<car_details> {
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
+                children: [
                   Text(
-                    'Toyota Prius Hybrid 2022',
-                    style: TextStyle(
+                    args['carModel'] ?? 'Toyota Prius Hybrid 2022',
+                    style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(height: 8),
-                  Text(
+                  const SizedBox(height: 8),
+                  const Text(
                     'Vendor: Toyota Motors | 5 seats | Automatic',
                     style: TextStyle(color: Colors.grey),
                   ),
-                  SizedBox(height: 16),
-                  Text(
+                  const SizedBox(height: 16),
+                  const Text(
                     'Daily Rent: \$55.00',
                     style: TextStyle(
                       fontSize: 18,
@@ -151,14 +154,15 @@ class _car_detailsState extends State<car_details> {
                       fontWeight: FontWeight.w600,
                     ),
                   ),
-                  SizedBox(height: 16),
-                  Text(
+                  const SizedBox(height: 16),
+                  const Text(
                     'Details:',
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(height: 6),
+                  const SizedBox(height: 6),
                   Text(
-                    'This hybrid car offers excellent fuel efficiency, perfect for city or long-distance rides. Fully insured and comes with 24/7 roadside assistance.',
+                    args['carDescription'] ??
+                        'This hybrid car offers excellent fuel efficiency, perfect for city or long-distance rides. Fully insured and comes with 24/7 roadside assistance.',
                   ),
                 ],
               ),
