@@ -185,7 +185,8 @@ class _menuState extends State<menu> {
                     color: const Color.fromARGB(255, 191, 190, 190),
                     child: InkWell(
                       onTap: () {
-                        Navigator.pushNamed(context, '/about');
+                        // Navigator.pushNamed(context, '/payment_methods');
+                        Get.toNamed('/payment_methods');
                       },
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),
@@ -214,101 +215,14 @@ class _menuState extends State<menu> {
                     color: const Color.fromARGB(255, 191, 190, 190),
                     child: InkWell(
                       onTap: () {
-                        Navigator.pushNamed(context, '/about');
+                        Navigator.pushNamed(context, '/login');
                       },
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: ListTile(
                           leading: Icon(Icons.person, color: Colors.black),
                           title: Text(
-                            'Profile',
-                            textAlign: TextAlign.left,
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          trailing: Icon(Icons.arrow_forward_ios,
-                              color: Colors.black),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                Container(
-                  width: Get.width * 0.95,
-                  child: Card(
-                    elevation: 1,
-                    color: const Color.fromARGB(255, 191, 190, 190),
-                    child: InkWell(
-                      onTap: () {
-                        Navigator.pushNamed(context, '/about');
-                      },
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: ListTile(
-                          leading: Icon(Icons.person, color: Colors.black),
-                          title: Text(
-                            'Profile',
-                            textAlign: TextAlign.left,
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          trailing: Icon(Icons.arrow_forward_ios,
-                              color: Colors.black),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                Container(
-                  width: Get.width * 0.95,
-                  child: Card(
-                    elevation: 1,
-                    color: const Color.fromARGB(255, 191, 190, 190),
-                    child: InkWell(
-                      onTap: () {
-                        Navigator.pushNamed(context, '/about');
-                      },
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: ListTile(
-                          leading: Icon(Icons.person, color: Colors.black),
-                          title: Text(
-                            'Profile',
-                            textAlign: TextAlign.left,
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          trailing: Icon(Icons.arrow_forward_ios,
-                              color: Colors.black),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                Container(
-                  width: Get.width * 0.95,
-                  child: Card(
-                    elevation: 1,
-                    color: const Color.fromARGB(255, 191, 190, 190),
-                    child: InkWell(
-                      onTap: () {
-                        Navigator.pushNamed(context, '/about');
-                      },
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: ListTile(
-                          leading: Icon(Icons.person, color: Colors.black),
-                          title: Text(
-                            'Profile',
+                            'Logout',
                             textAlign: TextAlign.left,
                             style: TextStyle(
                               color: Colors.black,

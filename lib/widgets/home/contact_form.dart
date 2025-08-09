@@ -39,6 +39,12 @@ class _contact_formState extends State<contact_form>
             fontWeight: FontWeight.bold,
           ),
         ),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
         backgroundColor: Colors.green,
       ),
       body: SingleChildScrollView(

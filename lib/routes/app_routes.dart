@@ -12,4 +12,5 @@ abstract class AppRoutes {
   static const String message = '/message';
   static const String start = '/start';
   static const String contact_form = '/contact_form';
+  static const String payment_methods = '/payment_methods';
 }
