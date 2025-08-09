@@ -40,7 +40,7 @@ class _menuState extends State<menu> {
                         width: Get.width * 0.47,
                         child: Card(
                           elevation: 1,
-                          color: const Color.fromARGB(255, 104, 107, 104),
+                          color: const Color.fromARGB(255, 191, 190, 190),
                           child: InkWell(
                             onTap: () {
                               //Navigator.pushNamed(context, '/home');
@@ -52,7 +52,7 @@ class _menuState extends State<menu> {
                                   '\$150',
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
-                                    color: Colors.white,
+                                    color: Colors.black,
                                     fontSize: 25,
                                     fontWeight: FontWeight.bold,
                                   ),
@@ -61,7 +61,7 @@ class _menuState extends State<menu> {
                                   'Current Balance',
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
-                                    color: Colors.white70,
+                                    color: Colors.black,
                                     fontSize: 14,
                                   ),
                                 ),
@@ -77,7 +77,7 @@ class _menuState extends State<menu> {
                             width: Get.width * 0.47,
                             child: Card(
                               elevation: 1,
-                              color: const Color.fromARGB(255, 104, 107, 104),
+                              color: const Color.fromARGB(255, 191, 190, 190),
                               child: InkWell(
                                 onTap: () {
                                   Navigator.pushNamed(context, '/profile');
@@ -89,7 +89,7 @@ class _menuState extends State<menu> {
                                       '1000',
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
-                                        color: Colors.white,
+                                        color: Colors.black,
                                         fontSize: 25,
                                         fontWeight: FontWeight.bold,
                                       ),
@@ -98,7 +98,7 @@ class _menuState extends State<menu> {
                                       'Points Earned',
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
-                                        color: Colors.white70,
+                                        color: Colors.black,
                                         fontSize: 14,
                                       ),
                                     ),
@@ -113,21 +113,30 @@ class _menuState extends State<menu> {
                             width: Get.width * 0.47,
                             child: Card(
                               elevation: 1,
-                              color: const Color.fromARGB(255, 104, 107, 104),
+                              color: const Color.fromARGB(255, 191, 190, 190),
                               child: InkWell(
                                 onTap: () {
                                   Navigator.pushNamed(context, '/settings');
                                 },
                                 child: Padding(
-                                  padding:
-                                      const EdgeInsets.fromLTRB(0, 30, 0, 30),
-                                  child: Text(
-                                    'Settings',
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 25,
-                                      fontWeight: FontWeight.bold,
+                                  padding: const EdgeInsets.all(10),
+                                  child: ListTile(
+                                    title: Text(
+                                      'Platinum',
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 25,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    subtitle: Text(
+                                      'Customer',
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 14,
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -144,7 +153,7 @@ class _menuState extends State<menu> {
                   width: Get.width * 0.95,
                   child: Card(
                     elevation: 1,
-                    color: const Color.fromARGB(255, 104, 107, 104),
+                    color: const Color.fromARGB(255, 191, 190, 190),
                     child: InkWell(
                       onTap: () {
                         Navigator.pushNamed(context, '/about');
@@ -152,18 +161,18 @@ class _menuState extends State<menu> {
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: ListTile(
-                          leading: Icon(Icons.person, color: Colors.white),
+                          leading: Icon(Icons.person, color: Colors.black),
                           title: Text(
                             'Profile',
                             textAlign: TextAlign.left,
                             style: TextStyle(
-                              color: Colors.white,
+                              color: Colors.black,
                               fontSize: 15,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
                           trailing: Icon(Icons.arrow_forward_ios,
-                              color: Colors.white),
+                              color: Colors.black),
                         ),
                       ),
                     ),
@@ -173,7 +182,7 @@ class _menuState extends State<menu> {
                   width: Get.width * 0.95,
                   child: Card(
                     elevation: 1,
-                    color: const Color.fromARGB(255, 104, 107, 104),
+                    color: const Color.fromARGB(255, 191, 190, 190),
                     child: InkWell(
                       onTap: () {
                         Navigator.pushNamed(context, '/about');
@@ -181,18 +190,18 @@ class _menuState extends State<menu> {
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: ListTile(
-                          leading: Icon(Icons.person, color: Colors.white),
+                          leading: Icon(Icons.payment, color: Colors.black),
                           title: Text(
-                            'Profile',
+                            'Payment Methods',
                             textAlign: TextAlign.left,
                             style: TextStyle(
-                              color: Colors.white,
+                              color: Colors.black,
                               fontSize: 15,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
                           trailing: Icon(Icons.arrow_forward_ios,
-                              color: Colors.white),
+                              color: Colors.black),
                         ),
                       ),
                     ),
@@ -202,7 +211,7 @@ class _menuState extends State<menu> {
                   width: Get.width * 0.95,
                   child: Card(
                     elevation: 1,
-                    color: const Color.fromARGB(255, 104, 107, 104),
+                    color: const Color.fromARGB(255, 191, 190, 190),
                     child: InkWell(
                       onTap: () {
                         Navigator.pushNamed(context, '/about');
@@ -210,18 +219,18 @@ class _menuState extends State<menu> {
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: ListTile(
-                          leading: Icon(Icons.person, color: Colors.white),
+                          leading: Icon(Icons.person, color: Colors.black),
                           title: Text(
                             'Profile',
                             textAlign: TextAlign.left,
                             style: TextStyle(
-                              color: Colors.white,
+                              color: Colors.black,
                               fontSize: 15,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
                           trailing: Icon(Icons.arrow_forward_ios,
-                              color: Colors.white),
+                              color: Colors.black),
                         ),
                       ),
                     ),
@@ -231,7 +240,7 @@ class _menuState extends State<menu> {
                   width: Get.width * 0.95,
                   child: Card(
                     elevation: 1,
-                    color: const Color.fromARGB(255, 104, 107, 104),
+                    color: const Color.fromARGB(255, 191, 190, 190),
                     child: InkWell(
                       onTap: () {
                         Navigator.pushNamed(context, '/about');
@@ -239,18 +248,18 @@ class _menuState extends State<menu> {
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: ListTile(
-                          leading: Icon(Icons.person, color: Colors.white),
+                          leading: Icon(Icons.person, color: Colors.black),
                           title: Text(
                             'Profile',
                             textAlign: TextAlign.left,
                             style: TextStyle(
-                              color: Colors.white,
+                              color: Colors.black,
                               fontSize: 15,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
                           trailing: Icon(Icons.arrow_forward_ios,
-                              color: Colors.white),
+                              color: Colors.black),
                         ),
                       ),
                     ),
@@ -260,7 +269,7 @@ class _menuState extends State<menu> {
                   width: Get.width * 0.95,
                   child: Card(
                     elevation: 1,
-                    color: const Color.fromARGB(255, 104, 107, 104),
+                    color: const Color.fromARGB(255, 191, 190, 190),
                     child: InkWell(
                       onTap: () {
                         Navigator.pushNamed(context, '/about');
@@ -268,18 +277,18 @@ class _menuState extends State<menu> {
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: ListTile(
-                          leading: Icon(Icons.person, color: Colors.white),
+                          leading: Icon(Icons.person, color: Colors.black),
                           title: Text(
                             'Profile',
                             textAlign: TextAlign.left,
                             style: TextStyle(
-                              color: Colors.white,
+                              color: Colors.black,
                               fontSize: 15,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
                           trailing: Icon(Icons.arrow_forward_ios,
-                              color: Colors.white),
+                              color: Colors.black),
                         ),
                       ),
                     ),
@@ -289,7 +298,7 @@ class _menuState extends State<menu> {
                   width: Get.width * 0.95,
                   child: Card(
                     elevation: 1,
-                    color: const Color.fromARGB(255, 104, 107, 104),
+                    color: const Color.fromARGB(255, 191, 190, 190),
                     child: InkWell(
                       onTap: () {
                         Navigator.pushNamed(context, '/about');
@@ -297,18 +306,18 @@ class _menuState extends State<menu> {
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: ListTile(
-                          leading: Icon(Icons.person, color: Colors.white),
+                          leading: Icon(Icons.person, color: Colors.black),
                           title: Text(
                             'Profile',
                             textAlign: TextAlign.left,
                             style: TextStyle(
-                              color: Colors.white,
+                              color: Colors.black,
                               fontSize: 15,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
                           trailing: Icon(Icons.arrow_forward_ios,
-                              color: Colors.white),
+                              color: Colors.black),
                         ),
                       ),
                     ),

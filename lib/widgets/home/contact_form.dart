@@ -1,3 +1,4 @@
+import 'package:car_rental_app/components/components.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/get_core.dart';
@@ -57,7 +58,7 @@ class _contact_formState extends State<contact_form>
                     children: [
                       Image.asset(
                         args['imagePath'],
-                        height: 100,
+                        height: Get.height * 0.2,
                         width: Get.width * 0.8,
                       ),
                       SizedBox(height: 10),
@@ -81,7 +82,7 @@ class _contact_formState extends State<contact_form>
                       ),
                       SizedBox(height: 5),
                       Text(
-                        'Rent: ${args['carRent']}',
+                        '${args['carRent']}',
                         style: const TextStyle(
                           color: Colors.black,
                           fontSize: 16,
@@ -95,16 +96,19 @@ class _contact_formState extends State<contact_form>
               ),
             ),
             // Add your contact form widgets here
-            TextField(
-              decoration: InputDecoration(labelText: 'Name'),
-            ),
-            TextField(
-              decoration: InputDecoration(labelText: 'Email'),
-            ),
-            TextField(
-              decoration: InputDecoration(labelText: 'Message'),
-              maxLines: 4,
-            ),
+            const SizedBox(height: 20),
+            textFormField(hintText: "data", icon: Icons.person),
+            const SizedBox(height: 10),
+            textFormField(hintText: "Email", icon: Icons.email),
+            const SizedBox(height: 10),
+            textFormField(hintText: "Phone", icon: Icons.phone),
+            const SizedBox(height: 10),
+            textFormField(hintText: "Address", icon: Icons.location_on),
+            const SizedBox(height: 10),
+            textFormField(hintText: "Date", icon: Icons.date_range),
+            const SizedBox(height: 10),
+            textFormField(hintText: "Message", icon: Icons.message),
+            const SizedBox(height: 20),
           ],
         ),
       ),
